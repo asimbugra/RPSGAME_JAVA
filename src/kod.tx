@@ -1,0 +1,51 @@
+import java.util.Scanner;
+import java.util.Random ;
+
+public class Main {
+
+    public static void main(String[] args) {
+        while (true) {
+
+            System.out.println("Please make your choice (rock, paper, scissors): ");
+            Scanner input = new Scanner(System.in);
+            String userChoice = input.nextLine();
+            String[] choices = {"rock", "paper", "scissors"};
+
+            Random random = new Random();
+            String computerChoice = choices[random.nextInt(choices.length)];
+
+
+
+                if (userChoice.equalsIgnoreCase("rock")) {
+                    if (computerChoice.equalsIgnoreCase("paper")) {
+                        System.out.println("Computer wins!");
+                    } else if (computerChoice.equalsIgnoreCase("scissors")) {
+                        System.out.println("You win!");
+                    } else {
+                        System.out.println("It's a tie!");
+                    }
+                }
+                if (userChoice.equalsIgnoreCase("paper")) {
+                    if (computerChoice.equalsIgnoreCase("scissors")) {
+                        System.out.println("Computer wins!");
+                    } else if (computerChoice.equalsIgnoreCase("rock")) {
+                        System.out.println("You win!");
+                    } else {
+                        System.out.println("It's a tie!");
+                    }
+                }
+                if (userChoice.equalsIgnoreCase("scissors")) {
+                    if (computerChoice.equalsIgnoreCase("rock")) {
+                        System.out.println("Computer wins!");
+                    } else if (computerChoice.equalsIgnoreCase("paper")) {
+                        System.out.println("You win!");
+                    } else {
+                        System.out.println("It's a tie!");
+                    }
+                }
+                System.out.println("You chose " + userChoice + " and the computer chose " + computerChoice);
+
+
+            }
+        }
+    }
